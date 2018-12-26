@@ -19,7 +19,7 @@ pipeline
            // junit 'reports/result.xml'
          }
         }
-         stage(‘deployment’)
+         stage('deployment')
           {
           steps
           {
