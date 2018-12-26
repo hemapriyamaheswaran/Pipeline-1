@@ -23,7 +23,7 @@ pipeline
           {
           steps
           {
-          sh 'cp /var/lib/jenkins/workspace/PipeGit/dist/rectangle.jar /var/www/html/rectangles/all'
+               sh 'cp /dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all'
           }
         }
      }
