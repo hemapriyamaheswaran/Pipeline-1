@@ -6,7 +6,7 @@ pipeline
       stage('unit Tests') 
           {
           steps {
-           sh 'ant -f test.xml -v'
+           bat 'ant -f test.xml -v'
            junit 'reports/result.xml'
          // sh 'ant -f build.xml -v'
           }
@@ -14,7 +14,7 @@ pipeline
      stage('build') 
           {
           steps {
-               sh 'ant -f build.xml -v'
+               bat 'ant -f build.xml -v'
            // sh 'ant -f test.xml -v'
            // junit 'reports/result.xml'
          }
@@ -22,7 +22,7 @@ pipeline
          stage('deployment')
           {
           steps {
-               sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all"
+               bat "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all"
           }
         }
      }
