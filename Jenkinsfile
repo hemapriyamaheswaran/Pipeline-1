@@ -6,6 +6,7 @@ pipeline
       stage('unit Tests') 
           {
           steps {
+           bat 'del /f Pipeline-1'
            bat 'ant -f test.xml -v'
            junit 'reports/result.xml'
          // sh 'ant -f build.xml -v'
