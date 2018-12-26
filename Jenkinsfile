@@ -21,9 +21,8 @@ pipeline
         }
          stage('deployment')
           {
-          steps
-          {
-               sh 'cp /dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all'
+          steps {
+               sh 'cp /dist/rectangle_${BUILD_NUMBER}.jar /var/www/html/rectangles/all'
           }
         }
      }
